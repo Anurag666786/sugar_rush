@@ -40,6 +40,19 @@ nav h2 {
     color: #ee2176;
 }
 
+/* ✅ Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
 /* Hamburger */
 .menu-toggle {
     display: none;
@@ -260,11 +273,16 @@ footer {
         max-width: 350px;
     }
 
-    /* Disable parallax on mobile for better performance */
     #menu,
     #about,
     #contact {
         background-attachment: scroll;
+    }
+
+    /* Smaller logo on mobile */
+    .logo img {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -274,7 +292,10 @@ footer {
 <body>
 
 <nav>
-    <h2>Sugar Rush</h2>
+    <div class="logo">
+        <img src="logo.png" alt="Sugar Rush Logo">
+        <h2>Sugar Rush</h2>
+    </div>
     <div class="menu-toggle" id="menu-btn">☰</div>
     <ul id="nav-links">
         <li><a href="#about">About</a></li>
