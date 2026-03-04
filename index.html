@@ -1,101 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sugar Rush</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sugar Rush | Premium Bakery</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        header {
-            background-color: #ee2176;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
 
-        nav {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        nav a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8f2;
+    color: #333;
+}
 
-        nav a:hover {
-            color: yellow;
-        }
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: white;
-            border-radius: 5px;
-        }
+nav h2 {
+    color: #ee2176;
+}
 
-        img {
-            width: 100%;
-            max-width: 400px;
-            display: block;
-            margin: 10px auto;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+}
 
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ee2176;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.unsplash.com/photo-1509440159596-0249088772ff");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    border: none;
+    background: #ee2176;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #c41660;
+}
+
+/* Sections */
+section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #ee2176;
+    font-size: 32px;
+}
+
+/* Menu Cards */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    padding: 0 15px 20px;
+    font-size: 14px;
+}
+
+/* Contact */
+.contact-box {
+    background: #ee2176;
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .hero h1 {
+        font-size: 35px;
+    }
+    nav {
+        flex-direction: column;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <header>
-        <img src="https://via.placeholder.com/400" alt="Sample Image">
-        <h1>Welcome to Sugar Rush</h1>
-        <p>India's best cakes and eatables available here...</p>
-    </header>
+<nav>
+    <h2>Sugar Rush</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<div class="hero">
+    <div>
+        <h1>Delicious Cakes Made With Love</h1>
+        <p>Premium handcrafted cakes for every special occasion</p>
+        <button>Order Now</button>
+    </div>
+</div>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>Order here for the best cakes.</p>
-    </section>
+<section id="menu">
+    <h2>Our Special Menu</h2>
+    <div class="menu-container">
 
-    <section id="services">
-        <h2>Menu</h2>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
-    </section>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1599785209707-28fbc4a8a1f5" alt="Chocolate Cake">
+            <h3>Chocolate Delight</h3>
+            <p>Rich and creamy chocolate cake topped with premium cocoa frosting.</p>
+        </div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p> Name = Jaisha Sharma</p>
-        <p> Contact Number: 9988477787</p>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c" alt="Strawberry Cake">
+            <h3>Strawberry Bliss</h3>
+            <p>Fresh strawberry cake layered with whipped cream and berries.</p>
+        </div>
 
-    </section>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7" alt="Cupcakes">
+            <h3>Custom Cupcakes</h3>
+            <p>Colorful and delicious cupcakes perfect for parties and events.</p>
+        </div>
 
-    <footer>
-        <p>© Sugar Rush | All Rights Reserved</p>
-    </footer>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>At Sugar Rush, we create freshly baked cakes and desserts using the finest ingredients. 
+    Our mission is to bring sweetness and happiness to every celebration.</p>
+</section>
+
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+        <p><strong>Owner:</strong> Jaisha Sharma</p>
+        <p><strong>Phone:</strong> +91 9988477787</p>
+        <p><strong>Email:</strong> ..............</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Sugar Rush | Premium Bakery | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
